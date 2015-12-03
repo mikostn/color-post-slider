@@ -1,7 +1,19 @@
 jQuery(document).ready(function($) {
-	$('.colorPost').click(function() {
-		$(this).toggleClass('opened');
-		$(this).closest('.colorPosts').toggleClass('opened');
-		$(this).closest('.colorPostSlider').toggleClass('opened');
+	// First remove all opened, if any...
+	$('.color, .colorPost, .colorPosts, .colorPostSlider').removeClass('opened');
+
+	$('.color, .colorPost').click(function() {
+		// get clicked color slide
+		$colorSlide = $('[data-color='+$(this).data('color')+']');
+		// toggle clicked slide state
+		$colorSlide.toggleClass('opened');
+		// is anything opened?
+		$ifOpened = $('.color, .colorPost').hasClass('opened');
+		// close all other slides if any opend
+		if($ifOpened){
+			$colorSlide.siblings().removeClass('opened');
+		}
+		// toggle parents state
+		$colorSlide.closest('.colorPosts, .colorPostSlider').toggleClass('opened', $ifOpened);
 	});
 })

@@ -22,7 +22,7 @@ while ($pq -> have_posts()) : $pq -> the_post();
 </header>';
 	$slide .= '<div class="content">'.get_the_content().'</div>';
 
-	$sliderCont .= '<div class="colorPost">'.$slide.'</div>';
+	$sliderCont .= '<div class="colorPost" data-color="'.$color.'">'.$slide.'</div>';
 
 	//echo '<pre>'.print_r($post, true).'</pre>';
 endwhile;
