@@ -2,6 +2,10 @@ jQuery(document).ready(function($) {
 	// First remove all opened, if any...
 	$('.color, .colorPost, .colorPosts, .colorPostSlider').removeClass('opened');
 
+	// set colors height to match slider
+	// $(window).on("resize", repositionDivOnResize)
+	$('.color, .colorPost, .colorPosts').height($('.colorPostSlider').height());
+
 	$('.color, .colorPost').click(function() {
 		// get clicked color slide
 		$colorSlide = $('[data-color='+$(this).data('color')+']');
