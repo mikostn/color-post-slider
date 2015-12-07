@@ -51,9 +51,6 @@
 .colorPostSlider.opened .colorPosts {
 	width: 85% !important;
 }
-.colorPostSlider.opened .colors {
-	width: 15% !important;
-}
 .colorPosts.opened .colorPost {
 	width: 0;
 }
@@ -64,9 +61,14 @@
 	display: block;
 	opacity: 1;
 }
-.colors {
+.colorPostSlider.opened .colors {
+	width: 15% !important;
 }
-.colors .color {
+.colorPostSlider.opened .color {
+    width: 50%;
+}
+.color.opened {
+    width: 0 !important;
 }
 
 /* ANIMATE */

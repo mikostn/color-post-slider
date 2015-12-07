@@ -1,9 +1,16 @@
 jQuery(document).ready(function($) {
-	// First remove all opened, if any...
+    
+/* TO DO:
+ * 
+ * -set elements width and height to fix current screen size:
+ *      $(window).on("resize", repositionDivOnResize)
+ * - touch support
+ */
+
+            // First remove all opened, if any...
 	$('.color, .colorPost, .colorPosts, .colorPostSlider').removeClass('opened');
 
 	// set colors height to match slider
-	// $(window).on("resize", repositionDivOnResize)
 	$('.color, .colorPost, .colorPosts').height($('.colorPostSlider').height());
 
 	$('.color, .colorPost').click(function() {
@@ -18,6 +25,6 @@ jQuery(document).ready(function($) {
 			$colorSlide.siblings().removeClass('opened');
 		}
 		// toggle parents state
-		$colorSlide.closest('.colorPosts, .colorPostSlider').toggleClass('opened', $ifOpened);
+		$colorSlide.closest('.colorPostSlider, .colorPosts').toggleClass('opened', $ifOpened);
 	});
-})
+});
