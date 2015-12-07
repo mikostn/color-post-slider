@@ -1,68 +1,78 @@
 .colorPostSlider {
-	/*height: 760px;*/
-	overflow: hidden;
-	position: relative;
+    /*height: 760px;*/
+    overflow: hidden;
+    position: relative;
 }
 .colorPosts {
-	float: left;
-	position: relative;
-	overflow: hidden;
-	/*height: 760px;*/
-	width: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    /*height: 760px;*/
+    width: 100%;
 }
 .colors {
-	float: left;
-	position: relative;
-	overflow: hidden;
-	/*height: 760px;*/
-	width: 0;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    /*height: 760px;*/
+    width: 0;
 }
 .colorPost {
-	float: left;
-	overflow: hidden;
-	position: relative;
-	width: 33.3333%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 33.3333%;
 }
 .colorPost .imageContainer {
-	float: left;
+    float: left;
+    margin-right: 1em;
 }
 .colorPost .header {
-	position: absolute;
-	top: 1em;
-	width: 44%;
-	left: 2.5em;
+    position: absolute;
+    top: 1em;
+    left: 2.5em;
+    width: 280px;
+    text-transform: uppercase;
+}
+.colorPost .header h3 {
+    font-weight: 300;
+}
+.colorPost .header h3 span {
+    font-weight: 900;
 }
 .colorPost .content {
-	display: none;
-	opacity: 0;
+    display: none;
+    opacity: 0;
+    padding: 1em;
 }
 .colorPost .header .title {
-	display: inline;
+    display: inline;
 }
 .colors .color {
-	display: block;
-	float: left;
-	width: 33.3333%;
-	content: " ";
-	height: 100%;
+    background-position: center top;
+    display: block;
+    float: left;
+    width: 33.3333%;
+    content: " ";
+    height: 100%;
 }
 
 /* OPEN STYLE*/
 .colorPostSlider.opened .colorPosts {
-	width: 85% !important;
+    width: 85% !important;
 }
 .colorPosts.opened .colorPost {
-	width: 0;
+    width: 0;
 }
 .colorPost.opened {
-	width: 100% !important;
+    width: 100% !important;
 }
 .colorPost.opened .content {
-	display: block;
-	opacity: 1;
+    display: block;
+    opacity: 1;
 }
 .colorPostSlider.opened .colors {
-	width: 15% !important;
+    width: 15% !important;
 }
 .colorPostSlider.opened .color {
     width: 50%;
@@ -73,28 +83,28 @@
 
 /* ANIMATE */
 .colorPosts, .colorPost, .colors, .colors .color {
-	-webkit-transition: all 0.41s ease;
-	-moz-transition: all 0.41s ease;
-	-o-transition: all 0.41s ease;
-	transition: all 0.41s ease;
+    -webkit-transition: all 0.41s ease;
+    -moz-transition: all 0.41s ease;
+    -o-transition: all 0.41s ease;
+    transition: all 0.41s ease;
 }
 .colorPost .content {
-	-webkit-transition: opacity 0.2s ease 0.4s;
-	-moz-transition: opacity 0.2s ease 0.4s;
-	-o-transition: opacity 0.2s ease 0.4s;
-	transition: opacity 0.2s ease 0.4s;
+    -webkit-transition: opacity 0.2s ease 0.4s;
+    -moz-transition: opacity 0.2s ease 0.4s;
+    -o-transition: opacity 0.2s ease 0.4s;
+    transition: opacity 0.2s ease 0.4s;
 }
 .colors .color, .colorPost .imageContainer img {
-	cursor: pointer;
-	-webkit-transition: all 0.25s linear;
-	-moz-transition: all 0.25s linear;
-	-o-transition: all 0.25s linear;
-	transition: all 0.25s linear;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25s linear;
 }
 .colors .color:hover, .colorPost .imageContainer img:hover {
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%);
-	filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
