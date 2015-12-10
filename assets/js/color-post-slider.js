@@ -7,14 +7,25 @@ jQuery(document).ready(function ($) {
      * - touch support
      */
 
+    function setColorInits() {
+        // set colors height to match slider
+        jQuery('.color, .colorPost, .colorPosts').height(jQuery('.colorPost .imageContainer').height());
+    }
+
+    // run init func with delay, wiat for resize to finish, + wait for css animations to finish!
+    var resizeTimer;
+    $(window).on('load resize', function (e) {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+            // Run code here, resizing has "stopped"
+            setColorInits();
+        }, 410);
+    });
+
     // First remove all opened, if any...
     $('.color, .colorPost, .colorPosts, .colorPostSlider').removeClass('opened');
-//$(window).on("resize"
 
     $('.color, .colorPost').click(function () {
-        // set colors height to match slider
-//	$('.color, .colorPost, .colorPosts').height($('.colorPostSlider').height());
-        $('.color, .colorPost, .colorPosts').height($('.colorPost .imageContainer img').height());
 
         // get clicked color slide
         $colorSlide = $('[data-color=' + $(this).data('color') + ']');

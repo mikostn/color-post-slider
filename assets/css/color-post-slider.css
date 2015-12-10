@@ -92,10 +92,10 @@
 
 /* ANIMATE */
 .colorPosts, .colorPost, .colors, .colors .color {
-    -webkit-transition: all 0.41s ease;
-    -moz-transition: all 0.41s ease;
-    -o-transition: all 0.41s ease;
-    transition: all 0.41s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 .colorPost .content {
     -webkit-transition: opacity 0.2s ease 0.4s;
@@ -110,9 +110,9 @@
     transition: all 0.25s linear;
 }
 .colors .color:hover, .colorPost .imageContainer img:hover {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
+    -webkit-filter: contrast(130%);
+    -moz-filter: contrast(130%);
+    -ms-filter: contrast(130%);
+    -o-filter: contrast(130%);
+    filter: contrast(130%);
 }
