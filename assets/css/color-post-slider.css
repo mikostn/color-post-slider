@@ -34,6 +34,7 @@
     max-width: 640px;
 }
 .colorPost .header {
+    cursor: pointer;
     position: absolute;
     top: 1em;
     left: 2.5em;
