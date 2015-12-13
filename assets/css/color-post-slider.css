@@ -37,11 +37,17 @@
     position: absolute;
     top: 1em;
     left: 2.5em;
-    width: 280px;
+    width: 300px;
     text-transform: uppercase;
 }
 .colorPost .header h3 {
     font-weight: 300;
+    padding: 0 7px;
+    line-height: 1.4;
+    -webkit-box-decoration-break: clone;
+    -ms-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 .colorPost .header h3 span {
     font-weight: 900;
@@ -52,6 +58,8 @@
     padding: 1em;
     overflow-y: scroll;
     height: 100%;
+}
+.colorPost .content a {
 }
 .colorPost .header .title {
     display: inline;

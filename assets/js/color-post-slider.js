@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
     // First remove all opened, if any...
     $('.color, .colorPost, .colorPosts, .colorPostSlider').removeClass('opened');
 
-    $('.color, .colorPost').click(function () {
+    $('.color, .colorPost .imageContainer, .colorPost .header').click(function () {
 
         // get clicked color slide
         $colorSlide = $('[data-color=' + $(this).data('color') + ']');

@@ -7,6 +7,7 @@ while ($pq -> have_posts()) : $pq -> the_post();
 	$post_data = get_post($post->ID, ARRAY_A);
 	$slug = $post_data['post_name'];
 	$color = get_post_meta($post->ID, 'color_post_color', true);
+	$colorFont = get_post_meta($post->ID, 'color_post_font', true);
         $thumbnail = '';
         if ( function_exists('has_post_thumbnail') && has_post_thumbnail($post->ID) ) {
             $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), full );
@@ -17,13 +18,13 @@ while ($pq -> have_posts()) : $pq -> the_post();
 
 	if ( has_post_thumbnail() ) {
 		$slide .= '
-<div class="imageContainer">
+<div class="imageContainer" data-color="'.$color.'">
 	<span>'.get_the_post_thumbnail().'</span>
 </div>';
 	}
 	$slide .= '
 <header class="header">
-	<h3 id="'.$slug.'" name="'.$slug.'" class="title" style="background-color:'.$color.';">'.str_replace(array('[', ']'), array('<span>', '</span>'), get_the_title()).'</h2>
+	<h3 id="'.$slug.'" name="'.$slug.'" class="title" style="color:'.$colorFont.';background-color:'.$color.';">'.str_replace(array('[', ']'), array('<span>', '</span>'), get_the_title()).'</h2>
 </header>';
 	$slide .= '<div class="content">'.get_the_content().'</div>';
 
