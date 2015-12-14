@@ -73,8 +73,23 @@
     width: 33.3333%;
     content: " ";
     height: 100%;
+    position: relative;
+    overflow: hidden;
 }
+.colors .color img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    max-width: unset;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
 
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+}
 /* OPEN STYLE*/
 .colorPostSlider.opened .colorPosts {
     width: 85% !important;

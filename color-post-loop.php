@@ -8,13 +8,14 @@ while ($pq -> have_posts()) : $pq -> the_post();
 	$slug = $post_data['post_name'];
 	$color = get_post_meta($post->ID, 'color_post_color', true);
 	$colorFont = get_post_meta($post->ID, 'color_post_font', true);
-        $thumbnail = '';
-        if ( function_exists('has_post_thumbnail') && has_post_thumbnail($post->ID) ) {
-            $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), full );
-        }
-        $color_bg_img = ($thumbnail[0])? 'background-image: url('.$thumbnail[0].');' : '';
+        $thumbnail = $color_bg_img = '';
+        $thumbnail = get_the_post_thumbnail();
+//        if ( function_exists('has_post_thumbnail') && has_post_thumbnail($post->ID) ) {
+//            $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), full );
+//        }
+//        $color_bg_img = ($thumbnail[0])? 'background-image: url('.$thumbnail[0].');' : '';
 
-        $sliderColors .= '<span class="color" data-color="'.$color.'" style="background-color:'.$color.';'.$color_bg_img.'"></span>';
+        $sliderColors .= '<span class="color" data-color="'.$color.'" style="background-color:'.$color.';'.$color_bg_img.'">'.get_the_post_thumbnail().'</span>';
 
 	if ( has_post_thumbnail() ) {
 		$slide .= '
