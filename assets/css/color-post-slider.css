@@ -1,145 +1,275 @@
 .colorPostSlider {
-    /*height: 760px;*/
-    overflow: hidden;
-    position: relative;
+  /*height: 760px;*/
+  overflow: hidden;
+  position: relative;
+  /* OPEN STYLE*/
+  /* ANIMATE */
 }
-.colorPosts {
-    float: left;
-    position: relative;
-    overflow: hidden;
-    /*height: 760px;*/
-    width: 100%;
+.colorPostSlider .colorPosts {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  /*height: 760px;*/
+  width: 100%;
 }
-.colors {
-    float: left;
-    position: relative;
-    overflow: hidden;
-    /*height: 760px;*/
-    width: 0;
+.colorPostSlider .colors {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  /*height: 760px;*/
+  width: 0;
 }
-.colorPost {
-    float: left;
-    overflow: hidden;
-    position: relative;
-    width: 33.3333%;
+.colorPostSlider .colorPost {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 33.3333%;
 }
-.colorPost .imageContainer {
-    float: left;
-    /*margin-right: 1em;*/
+.colorPostSlider .colorPost .imageContainer {
+  float: left;
+  /*margin-right: 1em;*/
 }
-.colorPost .imageContainer img {
-    cursor: pointer;
-    height: auto;
-    width: 33.3333vw;
-    max-width: 640px;
+.colorPostSlider .colorPost .imageContainer img {
+  cursor: pointer;
+  height: auto;
+  width: 33.3333vw;
+  max-width: 640px;
 }
-.colorPost .header {
-    cursor: pointer;
-    position: absolute;
-    top: 1em;
-    left: 2.5em;
-    width: 300px;
-    text-transform: uppercase;
+.colorPostSlider .colorPost .header {
+  cursor: pointer;
+  position: absolute;
+  top: 1em;
+  left: 2.5em;
+  width: 300px;
+  text-transform: uppercase;
 }
-.colorPost .header h3 {
-    font-weight: 300;
-    padding: 0 7px;
-    line-height: 1.4;
-    -webkit-box-decoration-break: clone;
-    -ms-box-decoration-break: clone;
-    -o-box-decoration-break: clone;
-    box-decoration-break: clone;
+.colorPostSlider .colorPost .header .title,
+.colorPostSlider .colorPost .header h3 {
+  display: inline;
+  font-weight: 300;
+  padding: 0 7px;
+  line-height: 1.4;
+  -webkit-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
-.colorPost .header h3 span {
-    font-weight: 900;
+.colorPostSlider .colorPost .header .title span,
+.colorPostSlider .colorPost .header h3 span {
+  font-weight: 900;
 }
-.colorPost .content {
-    display: none;
-    opacity: 0;
-    padding: 1em;
-    overflow-y: scroll;
-    height: 100%;
+.colorPostSlider .colorPost .content {
+  display: none;
+  opacity: 0;
+  padding: 1em;
+  overflow-y: scroll;
+  height: 100%;
 }
-.colorPost .content a {
+.colorPostSlider .colors .color {
+  cursor: pointer;
+  background-position: center top;
+  display: block;
+  float: left;
+  width: 33.3333%;
+  content: " ";
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
-.colorPost .header .title {
-    display: inline;
+.colorPostSlider .colors .color img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  max-width: unset;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  /* position the top  edge of the element at the middle of the parent */
+  left: 50%;
+  /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
+  /* This is a shorthand of
+                                                     translateX(-50%) and translateY(-50%) */
 }
-.colors .color {
-    cursor: pointer;
-    background-position: center top;
-    display: block;
-    float: left;
-    width: 33.3333%;
-    content: " ";
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-.colors .color img {
-    position: absolute;
-    height: 100%;
-    width: auto;
-    max-width: unset;
-    max-width: none;
-    margin-left: auto;
-    margin-right: auto;
-    top: 50%;  /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-
-    transform: translate(-50%, -50%); /* This is a shorthand of
-                                         translateX(-50%) and translateY(-50%) */
-}
-/* OPEN STYLE*/
 .colorPostSlider.opened .colorPosts {
-    width: 85% !important;
+  width: 85%;
 }
-.colorPosts.opened .colorPost {
-    width: 0;
+.colorPostSlider.opened .colorPosts.opened .colorPost {
+  width: 0;
 }
-.colorPost.opened {
-    width: 100% !important;
+.colorPostSlider.opened .colorPosts.opened .colorPost.opened {
+  width: 100%;
 }
-.colorPost.opened .content {
-    display: block;
-    opacity: 1;
+.colorPostSlider.opened .colorPosts.opened .colorPost.opened .content {
+  display: block;
+  opacity: 1;
 }
 .colorPostSlider.opened .colors {
-    width: 15% !important;
+  width: 15%;
 }
-.colorPostSlider.opened .color {
+.colorPostSlider.opened .colors .color {
+  width: 50%;
+}
+.colorPostSlider.opened .colors .color.opened {
+  width: 0;
+}
+.colorPostSlider .colorPosts,
+.colorPostSlider .colorPost,
+.colorPostSlider .colors,
+.colorPostSlider .colors .color {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-filter: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.colorPostSlider .colorPost .content {
+  -webkit-transition: opacity 0.2s ease 0.4s;
+  -moz-transition: opacity 0.2s ease 0.4s;
+  -o-transition: opacity 0.2s ease 0.4s;
+  -ms-filter: opacity 0.2s ease 0.4s;
+  transition: opacity 0.2s ease 0.4s;
+}
+.colorPostSlider .colors .color,
+.colorPostSlider .colorPost .imageContainer img {
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-filter: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+.colorPostSlider .colors .color:hover,
+.colorPostSlider .colorPost .imageContainer img:hover {
+  -webkit-filter: contrast(130%);
+  -moz-filter: contrast(130%);
+  -ms-filter: contrast(130%);
+  -o-filter: contrast(130%);
+  filter: contrast(130%);
+}
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 1024px) {
+  .colorPostSlider .colorPost .header {
+    top: 1em;
+    left: 1em;
+    width: 320px;
+    padding: 7px;
+  }
+  .colorPostSlider .colorPost .header .title,
+  .colorPostSlider .colorPost .header h3 {
+    font-size: 28px;
+  }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .colorPostSlider .colorPost .header {
+    top: 5px;
+    left: 5px;
+    width: 266px;
+    padding: 7px;
+  }
+  .colorPostSlider .colorPost .header .title,
+  .colorPostSlider .colorPost .header h3 {
+    font-size: 24px;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .colorPostSlider .colorPost .header {
+    top: 0;
+    left: 0;
+    width: 255px;
+    padding: 7px;
+  }
+  .colorPostSlider .colorPost .header .title,
+  .colorPostSlider .colorPost .header h3 {
+    font-size: 20px;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 640px) {
+  .colorPostSlider .colorPost .header {
+    top: 0;
+    left: 0;
+    width: 210px;
+    padding: 3px;
+  }
+  .colorPostSlider .colorPost .header .title,
+  .colorPostSlider .colorPost .header h3 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .colorPostSlider .colors {
+    display: none;
+  }
+  .colorPostSlider .colorPosts .colorPost {
+    width: 100%;
+  }
+  .colorPostSlider .colorPosts .colorPost .imageContainer {
+    height: 31vh;
+    overflow: hidden;
+  }
+  .colorPostSlider .colorPosts .colorPost .imageContainer img {
+    margin-top: -60px;
+    width: 100%;
+  }
+  .colorPostSlider .colorPosts .colorPost .content {
+    display: block;
+    height: 0;
+    padding: 0 1em;
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    -o-transition: all 0.2s ease 0.1s;
+    -ms-filter: all 0.2s ease 0.1s;
+    transition: all 0.2s ease 0.1s;
+  }
+  .colorPostSlider .colorPosts .colorPost .header {
+    top: 0;
+    left: 0;
+    width: 210px;
+    padding: 3px;
+  }
+  .colorPostSlider .colorPosts .colorPost .header .title,
+  .colorPostSlider .colorPosts .colorPost .header h3 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .colorPostSlider.opened .colorPosts {
+    width: 100%;
+  }
+  .colorPostSlider.opened .colorPosts.opened .colorPost {
+    width: 100%;
+  }
+  .colorPostSlider.opened .colorPosts.opened .colorPost.opened {
+    width: 100%;
+  }
+  .colorPostSlider.opened .colorPosts.opened .colorPost.opened .content {
+    height: 100%;
+    padding: 1em;
+  }
+  .colorPostSlider.opened .colors {
+    width: 15%;
+  }
+  .colorPostSlider.opened .colors .color {
     width: 50%;
+  }
+  .colorPostSlider.opened .colors .color.opened {
+    width: 0;
+  }
 }
-.color.opened {
-    width: 0 !important;
-}
-
-/* ANIMATE */
-.colorPosts, .colorPost, .colors, .colors .color {
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    -ms-filter: all 0.4s ease;
-    transition: all 0.4s ease;
-}
-.colorPost .content {
-    -webkit-transition: opacity 0.2s ease 0.4s;
-    -moz-transition: opacity 0.2s ease 0.4s;
-    -o-transition: opacity 0.2s ease 0.4s;
-    -ms-filter: opacity 0.2s ease 0.4s;
-    transition: opacity 0.2s ease 0.4s;
-}
-.colors .color, .colorPost .imageContainer img {
-    -webkit-transition: all 0.25s linear;
-    -moz-transition: all 0.25s linear;
-    -ms-filter: all 0.25s linear;
-    -o-transition: all 0.25s linear;
-    transition: all 0.25s linear;
-}
-.colors .color:hover, .colorPost .imageContainer img:hover {
-    -webkit-filter: contrast(130%);
-    -moz-filter: contrast(130%);
-    -ms-filter: contrast(130%);
-    -o-filter: contrast(130%);
-    filter: contrast(130%);
-}
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/*# sourceMappingURL=color-post-slider.css.map */

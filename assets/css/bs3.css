@@ -1,0 +1,126 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 1024px) {
+  .colorPostSlider .colorPost .header {
+    top: 1em;
+    left: 1em;
+    width: 320px;
+    padding: 7px;
+  }
+  .colorPostSlider .colorPost .header .title,
+  .colorPostSlider .colorPost .header h3 {
+    font-size: 28px;
+  }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .colorPostSlider .colorPost .header {
+    top: 5px;
+    left: 5px;
+    width: 266px;
+    padding: 7px;
+  }
+  .colorPostSlider .colorPost .header .title,
+  .colorPostSlider .colorPost .header h3 {
+    font-size: 24px;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .colorPostSlider .colorPost .header {
+    top: 0;
+    left: 0;
+    width: 255px;
+    padding: 7px;
+  }
+  .colorPostSlider .colorPost .header .title,
+  .colorPostSlider .colorPost .header h3 {
+    font-size: 20px;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 640px) {
+  .colorPostSlider .colorPost .header {
+    top: 0;
+    left: 0;
+    width: 210px;
+    padding: 3px;
+  }
+  .colorPostSlider .colorPost .header .title,
+  .colorPostSlider .colorPost .header h3 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .colorPostSlider .colors {
+    display: none;
+  }
+  .colorPostSlider .colorPosts .colorPost {
+    width: 100%;
+  }
+  .colorPostSlider .colorPosts .colorPost .imageContainer {
+    height: 31vh;
+    overflow: hidden;
+  }
+  .colorPostSlider .colorPosts .colorPost .imageContainer img {
+    margin-top: -60px;
+    width: 100%;
+  }
+  .colorPostSlider .colorPosts .colorPost .content {
+    display: block;
+    height: 0;
+    padding: 0 1em;
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    -o-transition: all 0.2s ease 0.1s;
+    -ms-filter: all 0.2s ease 0.1s;
+    transition: all 0.2s ease 0.1s;
+  }
+  .colorPostSlider .colorPosts .colorPost .header {
+    top: 0;
+    left: 0;
+    width: 210px;
+    padding: 3px;
+  }
+  .colorPostSlider .colorPosts .colorPost .header .title,
+  .colorPostSlider .colorPosts .colorPost .header h3 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .colorPostSlider.opened .colorPosts {
+    width: 100%;
+  }
+  .colorPostSlider.opened .colorPosts.opened .colorPost {
+    width: 100%;
+  }
+  .colorPostSlider.opened .colorPosts.opened .colorPost.opened {
+    width: 100%;
+  }
+  .colorPostSlider.opened .colorPosts.opened .colorPost.opened .content {
+    height: 100%;
+    padding: 1em;
+  }
+  .colorPostSlider.opened .colors {
+    width: 15%;
+  }
+  .colorPostSlider.opened .colors .color {
+    width: 50%;
+  }
+  .colorPostSlider.opened .colors .color.opened {
+    width: 0;
+  }
+}
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/*# sourceMappingURL=bs3.css.map */

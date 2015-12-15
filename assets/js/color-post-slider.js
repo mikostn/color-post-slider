@@ -7,9 +7,12 @@ jQuery(document).ready(function ($) {
      * - touch support
      */
 
-    function setColorInits() {
+    function setColorInits(max) {
+        max = max || 600;
         // set colors height to match slider
-        jQuery('.color, .colorPost, .colorPosts').height(jQuery('.colorPost .imageContainer').height());
+        if (max && jQuery(window).width() > max) {
+            jQuery('.color, .colorPost, .colorPosts').height(jQuery('.colorPost .imageContainer').height());
+        }
     }
 
     // run init func with delay, wiat for resize to finish, + wait for css animations to finish!
@@ -23,7 +26,7 @@ jQuery(document).ready(function ($) {
     });
 
     // First remove all opened, if any...
-    $('.color, .colorPost, .colorPosts, .colorPostSlider').removeClass('opened');
+    $('.colorPostSlider .opened').removeClass('opened');
 
     $('.colorPostSlider').on("click", ".color, .colorPost .imageContainer, .colorPost .header", function () {
 

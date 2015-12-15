@@ -1,0 +1,149 @@
+.colorPostSlider {
+    /*height: 760px;*/
+    overflow: hidden;
+    position: relative;
+
+    .colorPosts {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        /*height: 760px;*/
+        width: 100%;
+    }
+    .colors {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        /*height: 760px;*/
+        width: 0;
+    }
+
+    .colorPost {
+        float: left;
+        overflow: hidden;
+        position: relative;
+        width: 33.3333%;
+        .imageContainer {
+            float: left;
+            /*margin-right: 1em;*/
+            img {
+                cursor: pointer;
+                height: auto;
+                width: 33.3333vw;
+                max-width: 640px;
+            }
+        }
+        .header {
+            cursor: pointer;
+            position: absolute;
+            top: 1em;
+            left: 2.5em;
+            width: 300px;
+            text-transform: uppercase;
+            .title, h3 {
+                display: inline;
+                font-weight: 300;
+                padding: 0 7px;
+                line-height: 1.4;
+                -webkit-box-decoration-break: clone;
+                -ms-box-decoration-break: clone;
+                -o-box-decoration-break: clone;
+                box-decoration-break: clone;
+                span {
+                    font-weight: 900;
+                }
+            }
+        }
+        .content {
+            display: none;
+            opacity: 0;
+            padding: 1em;
+            overflow-y: scroll;
+            height: 100%;
+            a {
+            }
+        }
+    }
+    .colors {
+        .color {
+            cursor: pointer;
+            background-position: center top;
+            display: block;
+            float: left;
+            width: 33.3333%;
+            content: " ";
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            img {
+                position: absolute;
+                height: 100%;
+                width: auto;
+                max-width: unset;
+                max-width: none;
+                margin-left: auto;
+                margin-right: auto;
+                top: 50%;  /* position the top  edge of the element at the middle of the parent */
+                left: 50%; /* position the left edge of the element at the middle of the parent */
+
+                transform: translate(-50%, -50%); /* This is a shorthand of
+                                                     translateX(-50%) and translateY(-50%) */
+            }
+        }
+    }
+    /* OPEN STYLE*/
+    &.opened {
+        .colorPosts {
+            width: 85%;
+            &.opened .colorPost {
+                width: 0;
+                &.opened {
+                    width: 100%;
+                    .content {
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .colors {
+            width: 15%;
+            .color {
+                width: 50%;
+                &.opened {
+                    width: 0;
+                }
+            }
+        }
+    }
+    /* ANIMATE */
+    .colorPosts, .colorPost, .colors, .colors .color {
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        -ms-filter: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+    .colorPost .content {
+        -webkit-transition: opacity 0.2s ease 0.4s;
+        -moz-transition: opacity 0.2s ease 0.4s;
+        -o-transition: opacity 0.2s ease 0.4s;
+        -ms-filter: opacity 0.2s ease 0.4s;
+        transition: opacity 0.2s ease 0.4s;
+    }
+    .colors .color, .colorPost .imageContainer img {
+        -webkit-transition: all 0.25s linear;
+        -moz-transition: all 0.25s linear;
+        -ms-filter: all 0.25s linear;
+        -o-transition: all 0.25s linear;
+        transition: all 0.25s linear;
+    }
+    .colors .color:hover, .colorPost .imageContainer img:hover {
+        -webkit-filter: contrast(130%);
+        -moz-filter: contrast(130%);
+        -ms-filter: contrast(130%);
+        -o-filter: contrast(130%);
+        filter: contrast(130%);
+    }
+}
+@import "bs3.less";
