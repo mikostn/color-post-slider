@@ -12,6 +12,8 @@ jQuery(document).ready(function ($) {
         // set colors height to match slider
         if (max && jQuery(window).width() > max) {
             jQuery('.color, .colorPost, .colorPosts').height(jQuery('.colorPost .imageContainer').height());
+        }else{
+            jQuery('.color, .colorPost, .colorPosts').height('auto');
         }
     }
 
