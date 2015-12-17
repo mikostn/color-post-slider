@@ -1,4 +1,6 @@
 <?php
+defined( 'ABSPATH' ) or die();
+
 $sliderCont = '';
 $sliderColors = '';
 while ($pq -> have_posts()) : $pq -> the_post();
