@@ -59,7 +59,7 @@ class colorPostSliderWidget extends WP_Widget {
     }
 
     function plugin_scripts() {
-        wp_register_script('color-post-slider-js', plugins_url('/assets/js/color-post-slider.js', __FILE__), array('jquery'));
+        wp_register_script('color-post-slider-js', plugins_url('/assets/js/color-post-slider.js', __FILE__), array('jquery'), false, true);
         wp_enqueue_script('color-post-slider-js');
     }
 
