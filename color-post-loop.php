@@ -27,7 +27,7 @@ while ($pq -> have_posts()) : $pq -> the_post();
 	}
 	$slide .= '
 <header class="header" data-color="'.$color.'">
-	<h3 id="'.$slug.'" name="'.$slug.'" class="title" style="color:'.$colorFont.';background-color:'.$color.';">'.str_replace(array('[', ']'), array('<span>', '</span>'), get_the_title()).'</h2>
+	<h3 id="'.$slug.'" name="'.$slug.'" class="title" style="color:'.$colorFont.';background-color:'.$color.';">'.str_replace(array('[', ']'), array('<span>', '</span>'), get_the_title()).'</h3>
 </header>';
 	$slide .= '<div class="content">'.get_the_content().'</div>';
 
