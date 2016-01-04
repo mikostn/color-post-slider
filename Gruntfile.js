@@ -17,7 +17,7 @@ module.exports = function (grunt) {
         cssmin: {
             target: {
                 files: {
-                    'assets/css/timeline.min.css': ['assets/css/timeline.css']
+                    'assets/css/color-post-slider.min.css': ['assets/css/color-post-slider.css']
                 }
             }
         },
@@ -38,15 +38,15 @@ module.exports = function (grunt) {
 //                livereload: true
             },
             js: {
-                files: ['assets/js/*.js'],
+                files: ['assets/js/color-post-slider.js'],
                 tasks: ['uglify']
             },
             styles: {
-                files: ['assets/less/*.less'],
+                files: ['assets/less/color-post-slider.less'],
                 tasks: ['less']
             },
             mincss: {
-                files: ['assets/css/*.css'],
+                files: ['assets/css/color-post-slider.css'],
                 tasks: ['cssmin']
             },
             php: {

@@ -23,7 +23,7 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-defined( 'ABSPATH' ) or die();
+defined('ABSPATH') or die();
 
 /**
  * Adds Foo_Widget widget.
@@ -46,6 +46,7 @@ class colorPostSliderWidget extends WP_Widget {
         add_action('admin_footer-post-new.php', array(&$this, 'admin_footer'));
         add_action('save_post', array(&$this, 'update_post'));
 
+        add_action('init', array(&$this, 'registerScriptStyle'));
         add_action('wp_print_styles', array(&$this, 'plugin_styles'));
         add_action('wp_enqueue_scripts', array(&$this, 'plugin_scripts'));
     }
@@ -53,13 +54,21 @@ class colorPostSliderWidget extends WP_Widget {
     /**
      * Include CSS file for MyPlugin.
      */
+    function registerScriptStyle() {
+        if (!WP_DEBUG) {
+            wp_register_style('color-post-slider-css', plugins_url('/assets/css/color-post-slider.min.css', __FILE__));
+            wp_register_script('color-post-slider-js', plugins_url('/assets/js/color-post-slider.min.js', __FILE__), array('jquery'), false, true);
+        } else {
+            wp_register_style('color-post-slider-css', plugins_url('/assets/css/color-post-slider.css', __FILE__));
+            wp_register_script('color-post-slider-js', plugins_url('/assets/js/color-post-slider.js', __FILE__), array('jquery'), false, true);
+        }
+    }
+
     function plugin_styles() {
-        wp_register_style('color-post-slider-css', plugins_url('/assets/css/color-post-slider.css', __FILE__));
         wp_enqueue_style('color-post-slider-css');
     }
 
     function plugin_scripts() {
-        wp_register_script('color-post-slider-js', plugins_url('/assets/js/color-post-slider.js', __FILE__), array('jquery'), false, true);
         wp_enqueue_script('color-post-slider-js');
     }
 
