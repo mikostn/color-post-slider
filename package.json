@@ -1,23 +1,26 @@
 {
-    "name": "Color-Post-Slider",
-    "version": "1.0.0",
-    "description": "Wordpress slider widget",
-    "main": "README.md",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "devDependencies": {
-        "grunt": "*",
-        "grunt-contrib-uglify": "*",
-        "grunt-contrib-watch": "*",
-        "grunt-contrib-less": "*",
-        "grunt-contrib-cssmin": "*"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com:mikostn/color-post-slider.git"
-    },
-    "author": "miko@stn",
-    "license": "GPL-2.0",
-    "homepage": "https://github.com/mikostn/color-post-slider"
+  "name": "Color-Post-Slider",
+  "version": "1.0.0",
+  "description": "Wordpress slider widget",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-compress": "^0.14.0",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-rename": "0.0.3",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-mkdir": "^0.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:mikostn/color-post-slider.git"
+  },
+  "author": "miko@stn",
+  "license": "GPL-2.0",
+  "homepage": "https://github.com/mikostn/color-post-slider"
 }

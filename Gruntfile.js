@@ -52,11 +52,48 @@ module.exports = function (grunt) {
             php: {
                 files: ['**/*.php']
             }
+        },
+        mkdir: {
+            all: {
+                options: {
+                    create: ['dist']
+                }
+            }
+        },
+        compress: {
+            main: {
+                options: {
+                    archive: 'color-post-slider.zip'
+                },
+                expand: true,
+                src: [
+                    'assets/**',
+                    'includes/*',
+                    'index.php',
+                    'color-post-slider.php',
+                    'LICENSE',
+                    'readme.txt'
+                ],
+                dest: 'color-post-slider/'
+            }
+        },
+        rename: {
+            main: {
+                files: [
+                    {src: ['color-post-slider.zip'], dest: 'dist/color-post-slider.zip'}
+                ]
+            }
         }
     });
+
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.registerTask('default', ['less', 'uglify', 'watch']);
+
+    grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-mkdir');
+    grunt.loadNpmTasks('grunt-contrib-rename');
+    grunt.registerTask('package', ['mkdir', 'compress', 'rename']);
 };

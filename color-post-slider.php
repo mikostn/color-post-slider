@@ -189,7 +189,7 @@ class colorPostSliderWidget extends WP_Widget {
         $pq = new WP_Query(array('post_type' => 'color_post'));
 
         if ($pq->have_posts()) :
-            include_once('color-post-loop.php');
+            include_once(dirname(__FILE__) . '/includes/color-post-loop.php');
         endif;
 
         wp_reset_query();
