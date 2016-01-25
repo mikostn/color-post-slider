@@ -26,8 +26,8 @@ module.exports = function (grunt) {
                 sourceMap: true
             },
             files: {
-                src: ['js/color-post-slider.js'],
-                dest: 'js/',
+                src: ['assets/js/color-post-slider.js'],
+                dest: 'assets/js/',
                 expand: true,
                 flatten: true,
                 ext: '.min.js'
